@@ -1,9 +1,9 @@
-import Image from "next/image";
+import MainEntry from "./ui/mainEntry";
 
 export default function Home() {
   return (
-    <div>
-      
+    <div className="w-2/5">
+        <MainEntry />
     </div>
   );
 }
