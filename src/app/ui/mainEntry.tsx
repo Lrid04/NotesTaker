@@ -2,16 +2,24 @@
 
 import { FormEvent } from 'react'
 
-export default function MainEntry() {
-    async function handleSubmit(event: FormEvent<HTMLFormElement>){
+export default function MainEntry(props: {oldData: string, noteFunction: Function}) {
+
+    function handleSubmit(event: FormEvent<HTMLFormElement>){
         event.preventDefault()
         
         const formData = new FormData(event.currentTarget)  
         event.currentTarget.reset()
 
-        console.log(formData.get("titleEntry"))
-        console.log(formData.get("notesEntry"))
-        console.log(timeReturn())
+        const title = formData.get("titleEntry")
+        const notes = formData.get("notesEntry")
+        const time = timeReturn()
+
+        const newNotesString = `${props.oldData}\n${time} ${title}\nNotes:\n${notes}`
+        props.noteFunction(newNotesString)
+
+        console.log(title)
+        console.log(notes)
+        console.log(time)
         
     }
 
