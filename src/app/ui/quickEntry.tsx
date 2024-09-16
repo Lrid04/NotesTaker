@@ -12,7 +12,7 @@ export default function QuickEntry(props: {oldData: string, noteFunction: Functi
     }
 
     return (
-        <form onSubmit={handleSubmit} className='flex flex-col m-5 bg-zinc-600'>
+        <form onSubmit={handleSubmit} className='flex flex-col m-5 bg-zinc-600 w-fit h-fit'>
             <div className='flex flex-col items-center m-5'>
                 <label htmlFor="quickEnter" className='text-center'>Quick Motions</label>
                 <select name="quickEnter" id="quickEnter" className='px-9 py-3 text-2xl font-bold rounded-lg border 
