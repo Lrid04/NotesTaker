@@ -10,23 +10,12 @@ export default function MainEntry(props: {oldData: string, noteFunction: Functio
 
         const title = formData.get("titleEntry")
         const notes = formData.get("notesEntry")
-        const time = timeReturn()
         let notePrint = ""
         if (notes != ""){
             notePrint = `\nNotes:\n${notes}`
         }
-        const newNotesString = `${props.oldData}\n\n${time} ${title}${notePrint}`
+        const newNotesString = `${title}${notePrint}`
         props.noteFunction(newNotesString)
-    }
-
-    function timeReturn(){
-        let date = new Date();
-        let time = date.toLocaleString([], {
-        hour: '2-digit',
-        minute: '2-digit'
-         });
-
-        return time
     }
 
     return (
