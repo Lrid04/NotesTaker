@@ -5,6 +5,8 @@ import QuickEntry from "./ui/quickEntry";
 import PreviewPanel from "./ui/previewPanel";
 import HeadBar from "./ui/header";
 import { useState } from 'react';
+import FileSaver from 'file-saver';
+
 
 export default function Home() {
 
@@ -34,7 +36,6 @@ export default function Home() {
 }
 
   function Download(){
-    const FileSaver = require('file-saver');
     const blob = new Blob([notes], {type: "text/plain;charset=utf-8"});
     const today = new Date
     FileSaver.saveAs(blob, `club_notes${today.toLocaleDateString()}.txt`); 
