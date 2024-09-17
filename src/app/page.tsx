@@ -42,9 +42,9 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className="w-screen">
       <HeadBar downloadFunction = {Download} />
-      <div className="flex flex-row justify-evenly items-center my-5">
+      <div className="flex flex-col lg:flex-row justify-evenly items-center my-5">
         <MainEntry noteFunction = {updateNotesString} oldData = {notes} />
         <div className="flex flex-col items-center w-1/3">
           <QuickEntry  noteFunction = {updateNotesString} oldData = {notes} />
