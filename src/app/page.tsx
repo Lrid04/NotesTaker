@@ -24,8 +24,8 @@ export default function Home() {
   }
 
   function timeReturn(){
-    let date = new Date();
-    let time = date.toLocaleString([], {
+    const date = new Date();
+    const time = date.toLocaleString([], {
     hour: '2-digit',
     minute: '2-digit'
      });
