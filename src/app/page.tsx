@@ -34,19 +34,18 @@ export default function Home() {
 }
 
   function Download(){
-    console.log("Whyyy")
     const FileSaver = require('file-saver');
     const blob = new Blob([notes], {type: "text/plain;charset=utf-8"});
     const today = new Date
-    FileSaver.saveAs(blob, `club_notes${today.toLocaleDateString()}.md`); 
+    FileSaver.saveAs(blob, `club_notes${today.toLocaleDateString()}.txt`); 
   }
 
   return (
-    <div className="">
+    <div>
       <HeadBar downloadFunction = {Download} />
-      <div className="flex flex-row justify-evenly items-center">
+      <div className="flex flex-row justify-evenly items-center my-5">
         <MainEntry noteFunction = {updateNotesString} oldData = {notes} />
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center w-1/3">
           <QuickEntry  noteFunction = {updateNotesString} oldData = {notes} />
           <PreviewPanel content = {content}/>
         </div>
