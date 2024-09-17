@@ -1,6 +1,6 @@
 import { FormEvent } from 'react'
 
-export default function MainEntry(props: {oldData: string, noteFunction: Function}) {
+export default function MainEntry(props: {oldData: string, noteFunction: CallableFunction}) {
 
     function handleSubmit(event: FormEvent<HTMLFormElement>){
         event.preventDefault()

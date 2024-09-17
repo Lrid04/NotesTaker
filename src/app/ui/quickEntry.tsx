@@ -1,6 +1,6 @@
 import { FormEvent } from 'react'
 
-export default function QuickEntry(props: {oldData: string, noteFunction: Function}){
+export default function QuickEntry(props: {oldData: string, noteFunction: CallableFunction}){
     function handleSubmit(event: FormEvent<HTMLFormElement>){
         event.preventDefault()
         
