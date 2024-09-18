@@ -2,7 +2,7 @@
 export default function HeadBar(prop: {downloadFunction: VoidFunction}){
 
     return (
-        <div className="flex lg:justify-between lg:flex-row bg-zinc-800 lg:text-3xl text-2xl flex-col justify-center w-full">
+        <div className="flex lg:justify-between lg:flex-row bg-zinc-800 lg:text-3xl text-2xl flex-col justify-center">
             <p className="basis-1/3"></p>
             <h1 className="place-self-center lg:basis-1/3 text-center ">Secretary Note Taker 9000</h1>  
             <div className="lg:basis-1/3 flex lg:justify-end justify-center">

@@ -42,13 +42,16 @@ export default function Home() {
   }
 
   return (
-    <div className="w-screen">
+    <div className="w-screen over overscroll-none">
       <HeadBar downloadFunction = {Download} />
-      <div className="flex flex-col lg:flex-row justify-evenly items-center my-5">
+      <div className="flex flex-col-reverse lg:flex-row justify-evenly items-center lg:my-5 my-3">
         <MainEntry noteFunction = {updateNotesString} oldData = {notes} />
-        <div className="flex flex-col items-center w-1/3">
+        <div className="flex flex-col-reverse lg:flex-col items-center lg:w-1/3 w-full">
           <QuickEntry  noteFunction = {updateNotesString} oldData = {notes} />
-          <PreviewPanel content = {content}/>
+          <div className="w-full">
+            <PreviewPanel content = {content}/>
+          </div>
+          
         </div>
       </div>
     </div>
