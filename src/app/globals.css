@@ -26,10 +26,6 @@ body {
   }
 }
 
-label {
-  font-size: x-large;
-}
-
 pre {
   white-space: pre-wrap;
   word-wrap: break-word;
